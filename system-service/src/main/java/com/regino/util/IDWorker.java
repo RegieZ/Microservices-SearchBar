@@ -39,18 +39,18 @@ public class IDWorker {
     }
 
     /**
-     * @param workerId：工作机器ID
-     * @param datacenterId：序列号
+     * @param workerID：工作机器ID
+     * @param dataCenterID：序列号
      */
-    public IDWorker(long workerId, long datacenterId) {
-        if (workerId > maxWorkerId || workerId < 0) {
+    public IDWorker(long workerID, long dataCenterID) {
+        if (workerID > maxWorkerId || workerID < 0) {
             throw new IllegalArgumentException(String.format("worker Id can't be greater than %d or less than 0", maxWorkerId));
         }
-        if (datacenterId > maxDataCenterID || datacenterId < 0) {
+        if (dataCenterID > maxDataCenterID || dataCenterID < 0) {
             throw new IllegalArgumentException(String.format("datacenter Id can't be greater than %d or less than 0", maxDataCenterID));
         }
-        this.workerId = workerId;
-        this.dataCenterID = datacenterId;
+        this.workerId = workerID;
+        this.dataCenterID = dataCenterID;
     }
 
     /**
