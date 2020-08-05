@@ -1,5 +1,6 @@
 package com.regino.service;
 
+import com.regino.config.FeignLogConfig;
 import com.regino.pojo.Question;
 import com.regino.service.impl.SystemServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -9,9 +10,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 /*
     value：所要调用的服务应用名称
     fallback：注解中指定熔断类
+    configuration：可省略
  */
 @FeignClient(value = "search-service",
-        fallback = SystemServiceImpl.class)
+        fallback = SystemServiceImpl.class,
+        configuration = FeignLogConfig.class)
 public interface SystemService {
 
     /*
