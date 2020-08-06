@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
+@Api("搜索controller")
 @RestController
 @RequestMapping("search")
 public class SearchController {
@@ -21,12 +22,15 @@ public class SearchController {
     @Autowired
     private EsSearchService searchService;
 
+    @ApiOperation("根据问题搜索答案")
+    @ApiImplicitParam(name = "title", value = "问题")
     @PostMapping("/answer")
     public Map<String, Object> answer(String title){
         Map<String, Object> resultMap = searchService.search(title);
         return resultMap;
     }
 
+    @ApiOperation("新增问题")
     @PostMapping("addQuestion")
     public String addQuestion(@RequestBody Question question){
         try {
