@@ -1,4 +1,4 @@
-package com.regino;
+package com.regino.other;
 
 import java.util.*;
 

@@ -3,8 +3,6 @@ server:
 spring:
   application:
     name: eureka-server
-  main:
-    allow-bean-definition-overriding: true #遇到相同名字时，是否允许覆盖
 eureka:
   client:
     service-url:
