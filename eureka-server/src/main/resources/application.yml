@@ -4,10 +4,10 @@ spring:
   application:
     name: eureka-server
   main:
-    allow-bean-definition-overriding: true #Óöµ½ÏàÍ¬Ãû×ÖÊ±£¬ÊÇ·ñÔÊĞí¸²¸Ç
+    allow-bean-definition-overriding: true #é‡åˆ°ç›¸åŒåå­—æ—¶ï¼Œæ˜¯å¦å…è®¸è¦†ç›–
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka #×¢²áÖĞĞÄµØÖ·
-    fetch-registry: false #ÊÇ·ñ´Ó×¢²áÖĞĞÄÀ­È¡×¢²áÁĞ±í
-    register-with-eureka: false #ÊÇ·ñ×¢²áµ½eureka×¢²áÖĞĞÄ
+      defaultZone: http://127.0.0.1:8761/eureka #æ³¨å†Œä¸­å¿ƒåœ°å€
+    fetch-registry: false #æ˜¯å¦ä»æ³¨å†Œä¸­å¿ƒæ‹‰å–æ³¨å†Œåˆ—è¡¨
+    register-with-eureka: false #æ˜¯å¦æ³¨å†Œåˆ°eurekaæ³¨å†Œä¸­å¿ƒ

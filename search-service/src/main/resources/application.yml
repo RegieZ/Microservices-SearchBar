@@ -3,12 +3,12 @@ server:
 spring:
   application:
     name: search-service
-  #配置es连接信息
+  #閰嶇疆es杩炴帴淇℃伅
   data:
     elasticsearch:
-      cluster-name: elasticsearch #集群名称
-      cluster-nodes: 127.0.0.1:9300 #节点信息，tcp端口，集群可配置192.168.200.128:9301,192.168.200.128:9302,192.168.200.128:9303
+      cluster-name: elasticsearch #闆嗙兢鍚嶇О
+      cluster-nodes: 192.168.200.132:9200 #鑺傜偣淇℃伅锛宼cp绔彛锛岄泦缇ゅ彲閰嶇疆192.168.200.132:9301,192.168.200.132:9302,192.168.200.132:9303
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka #注册中心地址
+      defaultZone: http://127.0.0.1:8761/eureka #娉ㄥ唽涓績鍦板潃

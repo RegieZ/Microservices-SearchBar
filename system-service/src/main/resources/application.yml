@@ -6,21 +6,21 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka #×¢²áÖĞĞÄµØÖ·
+      defaultZone: http://127.0.0.1:8761/eureka #æ³¨å†Œä¸­å¿ƒåœ°å€
 ribbon:
-  ConnectiTimeout: 5000 #ÉèÖÃÁ¬½Ó³¬Ê±Ê±¼ä£¬Ä¬ÈÏ1s
+  ConnectiTimeout: 5000 #è®¾ç½®è¿æ¥è¶…æ—¶æ—¶é—´ï¼Œé»˜è®¤1s
 feign:
   hystrix:
-    enabled: true #¿ªÆôfeignÈÛ¶ÏÆ÷Ö§³Ö
+    enabled: true #å¼€å¯feignç†”æ–­å™¨æ”¯æŒ
   compression:
     request:
-      enabled: true #¿ªÆôÇëÇóÑ¹Ëõ
-      #ÒÔÏÂÁ½¸öÓĞÄ¬ÈÏÖµ£¬¿ÉÒÔ²»ÅäÖÃ
+      enabled: true #å¼€å¯è¯·æ±‚å‹ç¼©
+      #ä»¥ä¸‹ä¸¤ä¸ªæœ‰é»˜è®¤å€¼ï¼Œå¯ä»¥ä¸é…ç½®
       mime-types: text/xml, application/xml, application/json
-      min-request-size: 2048 #³¬¹ı2MB²ÅÑ¹Ëõ
+      min-request-size: 2048 #è¶…è¿‡2MBæ‰å‹ç¼©
     response:
       enabled: true
-#ÉùÃ÷ÈÕÖ¾¼¶±ğ
+#å£°æ˜æ—¥å¿—çº§åˆ«
 logging:
   level:
     com.regino: debug
