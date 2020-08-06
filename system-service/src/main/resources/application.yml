@@ -7,6 +7,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka #注册中心地址
+ribbon:
+  ConnectiTimeout: 5000 #设置连接超时时间，默认1s
 feign:
   hystrix:
     enabled: true #开启feign熔断器支持
