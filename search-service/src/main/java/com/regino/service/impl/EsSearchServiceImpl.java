@@ -7,10 +7,12 @@ import com.regino.service.EsSearchService;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Service
 public class EsSearchServiceImpl implements EsSearchService {
 
     @Autowired
