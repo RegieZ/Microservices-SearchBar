@@ -94,7 +94,7 @@ public class SystemController {
      * @return
      */
     @ApiOperation("添加问题接口")
-    @PostMapping("addQuestion")
+    @PostMapping("addQuestion/v4")
     public String addQuestion(@RequestBody Question question) {
         IDWorker idWorker = new IDWorker(0, 0);
         question.setId(String.valueOf(idWorker.nextId()));
