@@ -35,6 +35,8 @@ public class EsSearchServiceImpl implements EsSearchService {
         Iterable<Question> questions = questionRepository.search(queryBuilder);
         //3.解析结果
         resultMap.put("questionList", Lists.newArrayList(questions));
+        //转换list
+        //ArrayList<Question> questions = Lists.newArrayList(search);
         return resultMap;
     }
 }
