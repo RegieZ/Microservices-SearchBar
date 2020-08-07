@@ -2,12 +2,12 @@ server:
   port: 9091
 spring:
   application:
-    name: search-service
+    name: search-service #与FeignClient接口对应
   #配置es连接信息
   data:
     elasticsearch:
       cluster-name: elasticsearch #集群名称
-      cluster-nodes: 192.168.200.132:9200 #节点信息，tcp端口，集群可配置192.168.200.132:9301,192.168.200.132:9302,192.168.200.132:9303
+      cluster-nodes: 192.168.200.132:9300 #节点信息，tcp端口，集群可配置192.168.200.132:9301,192.168.200.132:9302,192.168.200.132:9303
 eureka:
   client:
     service-url:

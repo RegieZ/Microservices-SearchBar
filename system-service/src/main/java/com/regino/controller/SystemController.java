@@ -65,12 +65,19 @@ public class SystemController {
     }
 
     /*
-        http://127.0.0.1:9091/system/addQuestion/v3
+        Kibana:
+        DELETE /question/question/id
 
-        postman 选中body--->raw--->json格式--->请求体中编写json请求
+        Postman:
+
+        http://127.0.0.1:9092/system/addQuestion/v1/test/yes
+        http://127.0.0.1:9092/system/addQuestion/v2?title=test&answer=yes
+        http://127.0.0.1:9092/system/addQuestion/v3
+
+        postman 选中body--->raw--->json格式--->请求体中编写json请求（否则报415）
             {
-            "title":"Who are you?",
-             "answer":"Saul."
+            "title":"test",
+             "answer":"yes"
             }
      */
     /**
