@@ -93,7 +93,7 @@ public class SystemController {
      * @param question
      * @return
      */
-    @ApiOperation("添加问题接口")
+    @ApiOperation("添加问题接口v4")
     @PostMapping("addQuestion/v4")
     public String addQuestion(@RequestBody Question question) {
         IDWorker idWorker = new IDWorker(0, 0);
