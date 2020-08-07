@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SystemServiceImpl implements SystemService {
 
-    //熔断方法
+    //重写接口就是熔断方法
     @Override
     public String addQuestion(Question question) {
         return "远程调用失败，启用默认方法";

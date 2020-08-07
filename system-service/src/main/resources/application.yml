@@ -2,7 +2,7 @@ server:
   port: 9092
 spring:
   application:
-    name: system-service
+    name: system-service #不识别下划线_
 eureka:
   client:
     service-url:
@@ -22,5 +22,5 @@ feign:
       enabled: true
 #声明日志级别
 logging:
-  level:
+  level: #直接声明level: debug会把底层的spring日志都打印出来
     com.regino: debug

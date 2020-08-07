@@ -6,6 +6,7 @@ import com.regino.service.impl.SystemServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /*
     value：所要调用的服务应用名称
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient(value = "search-service",
         fallback = SystemServiceImpl.class,
         configuration = FeignLogConfig.class)
+//@RequestMapping("search") //从原先的search/addQuestion提出来后，需要先加载"search-service"，否则报错
 public interface SystemService {
 
     /*
@@ -24,6 +26,6 @@ public interface SystemService {
         Spring4.3中引进了｛@GetMapping、@PostMapping、@PutMapping、@DeleteMapping、@PatchMapping｝
             来帮助简化常用的HTTP方法的映射 并更好地表达被注解方法的语义
      */
-    @PostMapping("/search/addQuestion")
+    @PostMapping("search/addQuestion")
     String addQuestion(@RequestBody Question question);
 }
