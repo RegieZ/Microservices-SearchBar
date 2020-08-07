@@ -11,4 +11,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka #注册中心地址
+      defaultZone: http://192.168.200.132/eureka #注册中心地址
+  instance:
+    prefer-ip-address: true #以ip来注册
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} #192.168.200.132:9091
